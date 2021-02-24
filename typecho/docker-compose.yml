@@ -1,0 +1,39 @@
+version: "3.8"
+
+services: 
+
+  nginx: 
+    build: nginx
+    networks: 
+      - default
+    depends_on: 
+      - php
+    volumes: 
+      - "${ROOT_DIR}/html:/usr/share/nginx/html"
+    ports: 
+      - "80:80"
+      
+  php: 
+    build: php
+    networks: 
+      - default
+    volumes:
+      - "${ROOT_DIR}/html:/usr/share/nginx/html"
+    ports: 
+      - "9000:9000"
+      
+  db: 
+    image: "mysql:5.7.32"
+    networks: 
+      - default
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes: 
+      - "${ROOT_DIR}/data:/var/lib/mysql"
+    ports: 
+      - "3306:3306"
+
+networks:
+  default:
