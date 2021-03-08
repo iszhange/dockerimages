@@ -42,10 +42,8 @@ typecho
 至此，访问 127.0.0.1 即可进入安装页面
   
 如何自定义域名？
-修改`nginx/default.conf`中`server_name`，改成你想要的域名  
-停止容器 `docker-compose stop`  
-删除容器 `docker-compose rm`  
-重新执行 1、2、3 步骤  
+修改`nginx/vhost/default.conf`中`server_name`，改成你想要的域名  
+重启容器 `docker-compose restart`  
   
 数据库有问题？  
 typecho是不会创建数据库的，需要进入MySQL容器手动创建
