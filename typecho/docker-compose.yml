@@ -10,6 +10,7 @@ services:
       - php
     volumes: 
       - "${ROOT_DIR}/html:/usr/share/nginx/html"
+      - "${ROOT_DIR}/nginx/vhost:/etc/nginx/conf.d"
     ports: 
       - "80:80"
       
