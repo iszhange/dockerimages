@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  jenkins:
+    build: jenkins
+    networks:
+      - default
+    volumes:
+      - "${ROOT_DIR}/data:/var/jenkins_home"
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+networks:
+  default:

@@ -1,0 +1,2 @@
+FROM jenkins:2.60.3-alpine
+EXPOSE 8080 50000
