@@ -12,7 +12,9 @@ RUN apt-get install -y \
     build-essential \
 	openssl \
 	libssl-dev \
-	wget
+	wget \
+	unzip \
+	zip
 
 RUN docker-php-ext-install -j$(nproc) iconv \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
