@@ -1,0 +1,1 @@
+docker run --name mysql-57 -v C:\Workspace\docker\mysql\5.7\data:/var/lib/mysql -p 3307:3306 -e TZ=Asia/Shanghai -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --sql_mode=NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION --explicit_defaults_for_timestamp=true

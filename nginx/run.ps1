@@ -1,0 +1,1 @@
+docker run --name nginx -v C:\Workspace\docker\nginx:/etc/nginx -v C:\Workspace:/usr/share/nginx/html -p 81:80 -e TZ=Asia/Shanghai -d nginx
