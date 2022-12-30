@@ -1,1 +1,1 @@
-docker build -t php73-fmp .
+docker build -t php73-fpm .
